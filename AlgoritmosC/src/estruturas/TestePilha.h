@@ -7,15 +7,11 @@
 
 #ifndef TESTEPILHA_H_
 #define TESTEPILHA_H_
-#include <stack>          // std::stack
+#include <stack>
 #include <string>
 using namespace std;
 
-
 class TestePilha {
-
-private:
-	std::stack<int> queue;
 
 public:
 	TestePilha();
