@@ -23,7 +23,8 @@ int main() {
 
 	testePilha->~TestePilha();
 
-	TestaFilaDePrioridades * testaListaDePrioridades = new TestaFilaDePrioridades();
+	TestaFilaDePrioridades * testaListaDePrioridades =
+			new TestaFilaDePrioridades();
 	testaListaDePrioridades->geraEstruturaDefault(TAMANHO);
 	testaListaDePrioridades->geraEstruturaCustomizada(TAMANHO);
 	testaListaDePrioridades->~TestaFilaDePrioridades();

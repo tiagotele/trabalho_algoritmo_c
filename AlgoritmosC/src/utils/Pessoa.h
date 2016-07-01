@@ -20,7 +20,7 @@ public:
 	int getId();
 	string getNome();
 	string toString();
-	bool operator<(const Pessoa& right) const;
+	//bool operator<(const Pessoa& right) const;
 };
 
 

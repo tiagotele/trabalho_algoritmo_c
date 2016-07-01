@@ -28,6 +28,6 @@ string Pessoa::toString() {
 	return "id: " + std::to_string(id) + ": nome: " + nome;
 }
 
-bool Pessoa::operator<(const Pessoa& right) const {
+/*bool Pessoa::operator<(const Pessoa& right) const {
 	return id < right.id;
-}
+}*/

@@ -44,28 +44,37 @@ void TestaFilaDePrioridades::geraEstruturaDefault(int tamanho) {
 			+ std::to_string(elapsed_secs);
 }
 
+struct CompIdade {
+	bool operator()(Pessoa& p1, Pessoa& p2) {
+		return p1.getId() < p2.getId();
+	}
+};
+
 void TestaFilaDePrioridades::geraEstruturaCustomizada(int tamanho) {
 	clock_t begin = clock();
+	cout << " pessoa" << endl;
 
-	priority_queue<Pessoa*, vector<Pessoa*>,less<vector<Pessoa*>::value_type> > queue;
-	//std::priority_queue<Pessoa> queue;
+	priority_queue<Pessoa, vector<Pessoa>, CompIdade> queue;
 
-	std::srand(std::time(0)); // use current time as seed for random generator
+	std::srand(std::time(0));
 	for (int indice = 0; indice < tamanho; indice++) {
 		int random_variable = std::rand();
 		Pessoa * p = new Pessoa(random_variable, "Tiago");
-		queue.push(p);
+		queue.push(*p);
 		p->~Pessoa();
 	}
 
 	for (int indice = 0; indice < tamanho; indice++) {
+		Pessoa p = queue.top();
+		cout << " pessoa" << p.toString() << endl;
 		queue.pop();
 	}
 
 	clock_t end = clock();
 	double elapsed_secs = double(end - begin);
 
-	string resultado = "Tempo de execução do método geraEstruturaDefault: "
+	string resultado = "Tempo de execução do método geraEstruturaCustomizada: "
 			+ std::to_string(elapsed_secs);
+	cout << resultado << endl;
 
 }
