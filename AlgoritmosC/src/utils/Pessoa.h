@@ -10,18 +10,18 @@
 #include <string>
 using namespace std;
 
-
 class Pessoa {
-private:
+public:
 	int id;
 	string nome;
-public:
 	Pessoa(int id, string nome);
 	virtual ~Pessoa();
 
 	int getId();
 	string getNome();
 	string toString();
+	bool operator<(const Pessoa& right) const;
 };
+
 
 #endif /* PESSOA_H_ */
