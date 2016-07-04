@@ -24,9 +24,10 @@ TestaFilaDePrioridades::~TestaFilaDePrioridades() {
 void TestaFilaDePrioridades::geraEstruturaDefault(int tamanho) {
 	clock_t begin = clock();
 
+	std::srand(std::time(0));
+
 	std::priority_queue<int> queue;
 
-	std::srand(std::time(0)); // use current time as seed for random generator
 	for (int indice = 0; indice < tamanho; indice++) {
 		int random_variable = std::rand();
 		queue.push(random_variable);

@@ -6,9 +6,11 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
+
 #include "estruturas/TestePilha.h"
 #include "estruturas/TestaFilaDePrioridades.h"
 #include "estruturas/TesteTabelaHash.h"
+#include "estruturas/TestaListaEncadeada.h"
 #include <iostream>
 #include "utils/Pessoa.h"
 
@@ -16,7 +18,6 @@ using namespace std;
 
 int main() {
 	int TAMANHO = 100000;
-
 
 	//PILHA
 	TestePilha * testePilha;
@@ -38,5 +39,10 @@ int main() {
 	testaTabelaHash->geraEstruturaCustomizada(TAMANHO);
 	testaTabelaHash->~TesteTabelaHash();
 
+	//LISTA ENCADEADA
+	TestaListaEncadeada * testaListaEncadeada = new TestaListaEncadeada();
+	testaListaEncadeada->geraEstruturaDefault(TAMANHO);
+	testaListaEncadeada->geraEstruturaCustomizada(TAMANHO);
+	testaListaEncadeada->~TestaListaEncadeada();
 	return 0;
 }
