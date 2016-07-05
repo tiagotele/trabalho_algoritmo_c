@@ -6,13 +6,6 @@
  */
 
 #include "TestePilha.h"
-#include "../utils/Pessoa.h"
-#include "../utils/Utils.h"
-#include <iostream>
-#include <string>
-#include <ctime>
-
-using namespace std;
 
 TestePilha::TestePilha() {
 	cout << "Construtor" << endl; // prints !!!Hello World!!!

@@ -7,9 +7,12 @@
 
 #ifndef TESTEPILHA_H_
 #define TESTEPILHA_H_
+#include "../utils/Pessoa.h"
+#include "../utils/Utils.h"
 #include <stack>
 #include <string>
-using namespace std;
+#include <iostream>
+#include <ctime>
 
 class TestePilha {
 

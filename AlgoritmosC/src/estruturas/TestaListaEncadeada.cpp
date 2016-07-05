@@ -6,16 +6,6 @@
  */
 
 #include "TestaListaEncadeada.h"
-#include "../utils/Pessoa.h"
-#include "../utils/Utils.h"
-#include <list>
-#include <forward_list>
-#include <iostream>
-#include <string>
-#include <ctime>
-#include <random>
-
-using namespace std;
 
 TestaListaEncadeada::TestaListaEncadeada() {
 }

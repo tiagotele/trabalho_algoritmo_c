@@ -6,12 +6,6 @@
  */
 
 #include "TesteTabelaHash.h"
-#include "../utils/Pessoa.h"
-#include "../utils/Utils.h"
-#include <iostream>
-#include <string>
-#include <map>
-#include <unordered_map>
 
 TesteTabelaHash::TesteTabelaHash() {
 

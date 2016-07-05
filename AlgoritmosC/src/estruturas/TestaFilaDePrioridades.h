@@ -7,6 +7,15 @@
 
 #ifndef ESTRUTURAS_TESTAFILADEPRIORIDADES_H_
 #define ESTRUTURAS_TESTAFILADEPRIORIDADES_H_
+#include "../utils/Pessoa.h"
+#include "../utils/Utils.h"
+#include <queue>
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <random>
+using namespace std;
+
 
 class TestaFilaDePrioridades {
 public:

@@ -7,6 +7,17 @@
 
 #ifndef ESTRUTURAS_TESTALISTAENCADEADA_H_
 #define ESTRUTURAS_TESTALISTAENCADEADA_H_
+#include "../utils/Pessoa.h"
+#include "../utils/Utils.h"
+#include <list>
+#include <forward_list>
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <random>
+
+using namespace std;
+
 
 class TestaListaEncadeada {
 public:

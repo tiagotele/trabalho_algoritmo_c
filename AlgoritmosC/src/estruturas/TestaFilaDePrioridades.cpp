@@ -6,15 +6,7 @@
  */
 
 #include "TestaFilaDePrioridades.h"
-#include "../utils/Pessoa.h"
-#include "../utils/Utils.h"
-#include <queue>
-#include <iostream>
-#include <string>
-#include <ctime>
-#include <random>
 
-using namespace std;
 
 TestaFilaDePrioridades::TestaFilaDePrioridades() {
 }

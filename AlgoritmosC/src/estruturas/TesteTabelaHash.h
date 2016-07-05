@@ -7,6 +7,12 @@
 
 #ifndef ESTRUTURAS_TESTETABELAHASH_H_
 #define ESTRUTURAS_TESTETABELAHASH_H_
+#include "../utils/Pessoa.h"
+#include "../utils/Utils.h"
+#include <iostream>
+#include <string>
+#include <map>
+#include <unordered_map>
 
 class TesteTabelaHash {
 public:
