@@ -5,9 +5,9 @@
  *      Author: Tiago
  */
 
-#include "../utils/Pessoa.h"
-
 #include "TestaListaEncadeada.h"
+#include "../utils/Pessoa.h"
+#include "../utils/Utils.h"
 #include <list>
 #include <forward_list>
 #include <iostream>
@@ -43,10 +43,13 @@ void TestaListaEncadeada::geraEstruturaDefault(int tamanho) {
 	clock_t end = clock();
 	double elapsed_secs = double(end - begin);
 
-	string resultado =
-			"Tempo de execução do método geraEstruturaDefault: "
-					+ std::to_string(elapsed_secs);
+	string resultado = "Tempo de execução do método geraEstruturaDefault: "
+			+ std::to_string(elapsed_secs);
 	cout << resultado << endl;
+
+	Utils * utils = new Utils();
+	utils->criaLogDeExecucao(resultado);
+	utils->~Utils();
 
 }
 
@@ -73,9 +76,12 @@ void TestaListaEncadeada::geraEstruturaCustomizada(int tamanho) {
 	clock_t end = clock();
 	double elapsed_secs = double(end - begin);
 
-	string resultado =
-			"Tempo de execução do método geraEstruturaCustomizada: "
-					+ std::to_string(elapsed_secs);
+	string resultado = "Tempo de execução do método geraEstruturaCustomizada: "
+			+ std::to_string(elapsed_secs);
 	cout << resultado << endl;
+
+	Utils * utils = new Utils();
+	utils->criaLogDeExecucao(resultado);
+	utils->~Utils();
 }
 

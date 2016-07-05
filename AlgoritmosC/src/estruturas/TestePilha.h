@@ -15,7 +15,6 @@ class TestePilha {
 
 public:
 	TestePilha();
-	string meuMetodo(int tamanho);
 	virtual ~TestePilha();
 	void geraEstruturaDefault(int tamanho);
 	void geraEstruturaCustomizada(int tamanho);

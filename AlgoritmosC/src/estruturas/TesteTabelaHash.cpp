@@ -5,12 +5,13 @@
  *      Author: Tiago
  */
 
+#include "TesteTabelaHash.h"
+#include "../utils/Pessoa.h"
+#include "../utils/Utils.h"
 #include <iostream>
 #include <string>
 #include <map>
 #include <unordered_map>
-#include "TesteTabelaHash.h"
-#include "../utils/Pessoa.h"
 
 TesteTabelaHash::TesteTabelaHash() {
 
@@ -40,6 +41,11 @@ void TesteTabelaHash::geraEstruturaDefault(int tamanho) {
 			+ std::to_string(elapsed_secs);
 
 	cout << resultado << endl;
+
+	Utils * utils = new Utils();
+	utils->criaLogDeExecucao(resultado);
+	utils->~Utils();
+
 }
 
 void TesteTabelaHash::geraEstruturaCustomizada(int tamanho) {
@@ -63,7 +69,7 @@ void TesteTabelaHash::geraEstruturaCustomizada(int tamanho) {
 		string chave = it->first;
 		Pessoa pessoaDaTabelaHash = tempMap.at(chave);
 		/*std::cout << "Tabela Hash com chave e valor "
-				<< pessoaDaTabelaHash.toString() << std::endl;*/
+		 << pessoaDaTabelaHash.toString() << std::endl;*/
 
 	}
 
@@ -74,4 +80,7 @@ void TesteTabelaHash::geraEstruturaCustomizada(int tamanho) {
 			+ std::to_string(elapsed_secs);
 	cout << resultado << endl;
 
+	Utils * utils = new Utils();
+	utils->criaLogDeExecucao(resultado);
+	utils->~Utils();
 }

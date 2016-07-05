@@ -5,8 +5,9 @@
  *      Author: Tiago
  */
 
-#include "../utils/Pessoa.h"
 #include "TestaFilaDePrioridades.h"
+#include "../utils/Pessoa.h"
+#include "../utils/Utils.h"
 #include <queue>
 #include <iostream>
 #include <string>
@@ -43,6 +44,10 @@ void TestaFilaDePrioridades::geraEstruturaDefault(int tamanho) {
 
 	string resultado = "Tempo de execução do método geraEstruturaDefault: "
 			+ std::to_string(elapsed_secs);
+
+	Utils * utils = new Utils();
+	utils->criaLogDeExecucao(resultado);
+	utils->~Utils();
 }
 
 struct CompIdade {
@@ -76,6 +81,11 @@ void TestaFilaDePrioridades::geraEstruturaCustomizada(int tamanho) {
 
 	string resultado = "Tempo de execução do método geraEstruturaCustomizada: "
 			+ std::to_string(elapsed_secs);
+
 	cout << resultado << endl;
+
+	Utils * utils = new Utils();
+	utils->criaLogDeExecucao(resultado);
+	utils->~Utils();
 
 }

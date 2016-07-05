@@ -6,43 +6,54 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-
+#include "utils/Pessoa.h"
+#include "utils/Utils.h"
 #include "estruturas/TestePilha.h"
 #include "estruturas/TestaFilaDePrioridades.h"
 #include "estruturas/TesteTabelaHash.h"
 #include "estruturas/TestaListaEncadeada.h"
 #include <iostream>
-#include "utils/Pessoa.h"
 
 using namespace std;
 
 int main() {
 	int TAMANHO = 100000;
 
+	Utils * utilsPtr = new Utils();
+	utilsPtr->apagaLogDeExecucao();
+	utilsPtr->criaLogDeExecucao("Log");
+
 	//PILHA
-	TestePilha * testePilha;
-	testePilha = new TestePilha();
-	cout << testePilha->meuMetodo(TAMANHO) << endl;
-	testePilha->geraEstruturaCustomizada(TAMANHO);
-	testePilha->~TestePilha();
+	utilsPtr->criaLogDeExecucao("PILHA");
+	TestePilha * testePilhaPtr;
+	testePilhaPtr = new TestePilha();
+	testePilhaPtr->geraEstruturaDefault(TAMANHO);
+	testePilhaPtr->geraEstruturaCustomizada(TAMANHO);
+	testePilhaPtr->~TestePilha();
 
 	//FILA DE PRIORIDADES
-	TestaFilaDePrioridades * testaListaDePrioridades =
+	utilsPtr->criaLogDeExecucao("FILA DE PRIORIDADES");
+	TestaFilaDePrioridades * testaListaDePrioridadesPtr =
 			new TestaFilaDePrioridades();
-	testaListaDePrioridades->geraEstruturaDefault(TAMANHO);
-	testaListaDePrioridades->geraEstruturaCustomizada(TAMANHO);
-	testaListaDePrioridades->~TestaFilaDePrioridades();
+	testaListaDePrioridadesPtr->geraEstruturaDefault(TAMANHO);
+	testaListaDePrioridadesPtr->geraEstruturaCustomizada(TAMANHO);
+	testaListaDePrioridadesPtr->~TestaFilaDePrioridades();
 
 	//TABELA HASH
-	TesteTabelaHash * testaTabelaHash = new TesteTabelaHash();
-	testaTabelaHash->geraEstruturaDefault(TAMANHO);
-	testaTabelaHash->geraEstruturaCustomizada(TAMANHO);
-	testaTabelaHash->~TesteTabelaHash();
+	utilsPtr->criaLogDeExecucao("TABELA HASH");
+	TesteTabelaHash * testaTabelaHashPtr = new TesteTabelaHash();
+	testaTabelaHashPtr->geraEstruturaDefault(TAMANHO);
+	testaTabelaHashPtr->geraEstruturaCustomizada(TAMANHO);
+	testaTabelaHashPtr->~TesteTabelaHash();
 
 	//LISTA ENCADEADA
-	TestaListaEncadeada * testaListaEncadeada = new TestaListaEncadeada();
-	testaListaEncadeada->geraEstruturaDefault(TAMANHO);
-	testaListaEncadeada->geraEstruturaCustomizada(TAMANHO);
-	testaListaEncadeada->~TestaListaEncadeada();
+	utilsPtr->criaLogDeExecucao("LISTA ENCADEADA");
+	TestaListaEncadeada * testaListaEncadeadaPtr = new TestaListaEncadeada();
+	testaListaEncadeadaPtr->geraEstruturaDefault(TAMANHO);
+	testaListaEncadeadaPtr->geraEstruturaCustomizada(TAMANHO);
+	testaListaEncadeadaPtr->~TestaListaEncadeada();
+
+	utilsPtr->~Utils();
+
 	return 0;
 }
