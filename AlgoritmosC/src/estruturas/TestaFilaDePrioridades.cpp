@@ -27,12 +27,12 @@ void TestaFilaDePrioridades::geraEstruturaDefault(int tamanho) {
 	}
 
 	for (int indice = 0; indice < tamanho; indice++) {
-		cout << queue.top() << endl;
+		//cout << queue.top() << endl;
 		queue.pop();
 	}
 
 	clock_t end = clock();
-	double elapsed_secs = double(end - begin);
+	double elapsed_secs = (double(end - begin))/CLOCKS_PER_SEC;
 
 	string resultado = "Tempo de execução do método geraEstruturaDefault: "
 			+ std::to_string(elapsed_secs);
@@ -64,12 +64,12 @@ void TestaFilaDePrioridades::geraEstruturaCustomizada(int tamanho) {
 
 	for (int indice = 0; indice < tamanho; indice++) {
 		Pessoa p = queue.top();
-		cout << " pessoa" << p.toString() << endl;
+		//cout << " pessoa" << p.toString() << endl;
 		queue.pop();
 	}
 
 	clock_t end = clock();
-	double elapsed_secs = double(end - begin);
+	double elapsed_secs = (double(end - begin))/CLOCKS_PER_SEC;
 
 	string resultado = "Tempo de execução do método geraEstruturaCustomizada: "
 			+ std::to_string(elapsed_secs);

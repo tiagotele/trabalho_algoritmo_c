@@ -29,7 +29,7 @@ void TestePilha::geraEstruturaDefault(int tamanho) {
 	}
 
 	clock_t end = clock();
-	double elapsed_secs = double(end - begin);
+	double elapsed_secs = (double(end - begin))/CLOCKS_PER_SEC;
 
 	string resultado = "Tempo de execução do método geraEstruturaCustomizada: "
 			+ std::to_string(elapsed_secs);
@@ -57,7 +57,7 @@ void TestePilha::geraEstruturaCustomizada(int tamanho) {
 	}
 
 	clock_t end = clock();
-	double elapsed_secs = double(end - begin);
+	double elapsed_secs = (double(end - begin))/CLOCKS_PER_SEC;
 
 	string resultado = "Tempo de execução do método geraEstruturaCustomizada: "
 			+ std::to_string(elapsed_secs);

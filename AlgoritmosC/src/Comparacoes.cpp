@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : HelloWorldCplusplus.cpp
+// Name        : Comparacoes.cpp
 // Author      :Tiago Melo
 // Version     :
 // Copyright   : Your copyright notice
